@@ -1,0 +1,29 @@
+Module                  Size  Used by
+bluetooth             385024  0
+ecdh_generic           24576  1 bluetooth
+fuse                  110592  3
+cfg80211              655360  0
+rfkill                 32768  3 bluetooth,cfg80211
+evdev                  24576  3
+vc4                   176128  3
+snd_soc_core          204800  1 vc4
+snd_pcm_dmaengine      16384  1 snd_soc_core
+drm_kms_helper        188416  3 vc4
+drm                   413696  3 vc4,drm_kms_helper
+syscopyarea            16384  1 drm_kms_helper
+sysfillrect            16384  1 drm_kms_helper
+snd_bcm2835            40960  1
+sysimgblt              16384  1 drm_kms_helper
+fb_sys_fops            16384  1 drm_kms_helper
+snd_pcm               131072  4 vc4,snd_pcm_dmaengine,snd_bcm2835,snd_soc_core
+snd_timer              36864  1 snd_pcm
+snd                    98304  6 snd_timer,snd_bcm2835,snd_soc_core,snd_pcm
+pwm_bcm2835            16384  0
+i2c_bcm2835            16384  0
+vchiq                 344064  1 snd_bcm2835
+uio_pdrv_genirq        16384  0
+uio                    24576  1 uio_pdrv_genirq
+i2c_dev                20480  0
+ip_tables              28672  0
+x_tables               45056  1 ip_tables
+ipv6                  462848  22

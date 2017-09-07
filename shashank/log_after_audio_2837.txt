@@ -1,0 +1,593 @@
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.12.2-v8 (root@vta090l) (gcc version 4.8.4 (Ubuntu/Linaro 4.8.4-2ubuntu1~14.04.1) ) #2 SMP PREEMPT Thu Sep 7 12:05:04 IST 2017
+[    0.000000] Boot CPU: AArch64 Processor [410fd034]
+[    0.000000] Machine model: Raspberry Pi 3 Model B Rev 1.2
+[    0.000000] efi: Getting EFI parameters from FDT:
+[    0.000000] efi: UEFI not found.
+[    0.000000] cma: Reserved 8 MiB at 0x000000003ac00000
+[    0.000000] On node 0 totalpages: 242688
+[    0.000000]   DMA zone: 3792 pages used for memmap
+[    0.000000]   DMA zone: 0 pages reserved
+[    0.000000]   DMA zone: 242688 pages, LIFO batch:31
+[    0.000000] percpu: Embedded 25 pages/cpu @ffffffe5bab78000 s63232 r8192 d30976 u102400
+[    0.000000] pcpu-alloc: s63232 r8192 d30976 u102400 alloc=25*4096
+[    0.000000] pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 
+[    0.000000] Detected VIPT I-cache on CPU0
+[    0.000000] CPU features: enabling workaround for ARM erratum 845719
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 238896
+[    0.000000] Kernel command line: earlyprintk console=ttyAMA0 bcm2708_fb.fbwidth=1366 bcm2708_fb.fbheight=768 bcm2708_fb.fbswap=1 dma.dmachans=0x7f35 bcm2709.boardrev=0xa02082 bcm2709.serial=0x669f669d bcm2709.uart_clock=48000000 vc_mem.mem_base=0x3ec00000 vc_mem.mem_size=0x40000000  dwc_otg.lpm_enable=0 console=ttyS0,115200 console=tty1 root=PARTUUID=0ccd8861-02 rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait quiet splash plymouth.ignore-serial-consoles
+[    0.000000] PID hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.000000] Dentry cache hash table entries: 131072 (order: 8, 1048576 bytes)
+[    0.000000] Inode-cache hash table entries: 65536 (order: 7, 524288 bytes)
+[    0.000000] Memory: 931148K/970752K available (6588K kernel code, 790K rwdata, 2232K rodata, 2496K init, 694K bss, 31412K reserved, 8192K cma-reserved)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     modules : 0xffffff8000000000 - 0xffffff8008000000   (   128 MB)
+[    0.000000]     vmalloc : 0xffffff8008000000 - 0xffffffbebfff0000   (   250 GB)
+[    0.000000]       .text : 0xffffff8875a80000 - 0xffffff88760f0000   (  6592 KB)
+[    0.000000]     .rodata : 0xffffff88760f0000 - 0xffffff8876330000   (  2304 KB)
+[    0.000000]       .init : 0xffffff8876330000 - 0xffffff88765a0000   (  2496 KB)
+[    0.000000]       .data : 0xffffff88765a0000 - 0xffffff8876665a00   (   791 KB)
+[    0.000000]        .bss : 0xffffff8876665a00 - 0xffffff8876713548   (   695 KB)
+[    0.000000]     fixed   : 0xffffffbefe7fd000 - 0xffffffbefec00000   (  4108 KB)
+[    0.000000]     PCI I/O : 0xffffffbefee00000 - 0xffffffbeffe00000   (    16 MB)
+[    0.000000]     vmemmap : 0xffffffbf00000000 - 0xffffffc000000000   (     4 GB maximum)
+[    0.000000]               0xffffffbf96000000 - 0xffffffbf96ed0000   (    14 MB actual)
+[    0.000000]     memory  : 0xffffffe580000000 - 0xffffffe5bb400000   (   948 MB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] ftrace: allocating 24307 entries in 95 pages
+[    0.000000] Preemptible hierarchical RCU implementation.
+[    0.000000] NR_IRQS:64 nr_irqs:64 0
+[    0.000000] Failed to get local register map. FIQ is disabled for cpus > 1
+[    0.000000] arch_timer: cp15 timer(s) running at 19.20MHz (phys).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x46d987e47, max_idle_ns: 440795202767 ns
+[    0.000007] sched_clock: 56 bits at 19MHz, resolution 52ns, wraps every 4398046511078ns
+[    0.000204] Console: colour dummy device 80x25
+[    0.000247] console [tty1] enabled
+[    0.000266] Calibrating delay loop (skipped), value calculated using timer frequency.. 38.40 BogoMIPS (lpj=19200)
+[    0.000283] pid_max: default: 32768 minimum: 301
+[    0.000593] Mount-cache hash table entries: 2048 (order: 2, 16384 bytes)
+[    0.000605] Mountpoint-cache hash table entries: 2048 (order: 2, 16384 bytes)
+[    0.005109] ASID allocator initialised with 65536 entries
+[    0.009404] EFI services will not be available.
+[    0.011173] smp: Bringing up secondary CPUs ...
+[    0.018377] Detected VIPT I-cache on CPU1
+[    0.018445] CPU1: Booted secondary processor [410fd034]
+[    0.025485] Detected VIPT I-cache on CPU2
+[    0.025531] CPU2: Booted secondary processor [410fd034]
+[    0.032624] Detected VIPT I-cache on CPU3
+[    0.032667] CPU3: Booted secondary processor [410fd034]
+[    0.032771] smp: Brought up 1 node, 4 CPUs
+[    0.032783] SMP: Total of 4 processors activated.
+[    0.032799] CPU features: detected feature: 32-bit EL0 Support
+[    0.032820] CPU: All CPU(s) started at EL2
+[    0.032855] alternatives: patching kernel code
+[    0.034172] devtmpfs: initialized
+[    0.046111] DMI not present or invalid.
+[    0.046393] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+[    0.046419] futex hash table entries: 1024 (order: 5, 131072 bytes)
+[    0.047078] pinctrl core: initialized pinctrl subsystem
+[    0.047798] NET: Registered protocol family 16
+[    0.054313] cpuidle: using governor menu
+[    0.054818] vdso: 2 pages (1 code @ ffffff88760f7000, 1 data @ ffffff88765a4000)
+[    0.054844] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    0.058820] DMA: preallocated 256 KiB pool for atomic allocations
+[    0.058972] Serial: AMBA PL011 UART driver
+[    0.064408] bcm2835-mbox 3f00b880.mailbox: mailbox enabled
+[    0.065416] 3f201000.serial: ttyAMA0 at MMIO 0x3f201000 (irq = 72, base_baud = 0) is a PL011 rev2
+[    0.086080] console [ttyAMA0] enabled
+[    0.088425] irq: no irq domain found for /soc/aux@0x7e215000 !
+[    0.129852] bcm2835-dma 3f007000.dma: DMA legacy API manager at ffffff800804d000, dmachans=0x1
+[    0.131930] SCSI subsystem initialized
+[    0.132102] usbcore: registered new interface driver usbfs
+[    0.132178] usbcore: registered new interface driver hub
+[    0.132313] usbcore: registered new device driver usb
+[    0.132560] dmi: Firmware registration failed.
+[    0.146953] raspberrypi-firmware soc:firmware: Attached to firmware from 2017-08-08 12:01
+[    0.148512] clocksource: Switched to clocksource arch_sys_counter
+[    0.248369] VFS: Disk quotas dquot_6.6.0
+[    0.248471] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    0.248710] FS-Cache: Loaded
+[    0.248985] CacheFiles: Loaded
+[    0.261733] NET: Registered protocol family 2
+[    0.262608] TCP established hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.262761] TCP bind hash table entries: 8192 (order: 5, 131072 bytes)
+[    0.263010] TCP: Hash tables configured (established 8192 bind 8192)
+[    0.263237] UDP hash table entries: 512 (order: 2, 16384 bytes)
+[    0.263290] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+[    0.263640] NET: Registered protocol family 1
+[    0.264244] RPC: Registered named UNIX socket transport module.
+[    0.264253] RPC: Registered udp transport module.
+[    0.264260] RPC: Registered tcp transport module.
+[    0.264267] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.267889] workingset: timestamp_bits=46 max_order=18 bucket_order=0
+[    0.282015] FS-Cache: Netfs 'nfs' registered for caching
+[    0.282900] NFS: Registering the id_resolver key type
+[    0.282946] Key type id_resolver registered
+[    0.282956] Key type id_legacy registered
+[    0.285696] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 251)
+[    0.285887] io scheduler noop registered
+[    0.285901] io scheduler deadline registered (default)
+[    0.286117] io scheduler cfq registered
+[    0.286130] io scheduler mq-deadline registered
+[    0.286142] io scheduler kyber registered
+[    0.292972] bcm2835-aux-uart 3f215040.serial: unable to register 8250 port - -28
+[    0.315238] bcm2835-aux-uart: probe of 3f215040.serial failed with error -28
+[    0.316397] bcm2835-rng 3f104000.rng: hwrng registered
+[    0.316598] vc-mem: phys_addr:0x00000000 mem_base=0x3ec00000 mem_size:0x40000000(1024 MiB)
+[    0.317274] cacheinfo: Unable to detect cache hierarchy for CPU 0
+[    0.334587] brd: module loaded
+[    0.348574] loop: module loaded
+[    0.348592] Loading iSCSI transport class v2.0-870.
+[    0.349314] usbcore: registered new interface driver smsc95xx
+[    0.349335] dwc_otg: version 3.00a 10-AUG-2012 (platform bus)
+[    0.349594] dwc_otg: FIQ enabled
+[    0.349605] dwc_otg: NAK holdoff enabled
+[    0.349615] dwc_otg: FIQ split-transaction FSM enabled
+[    0.349631] Module dwc_common_port init
+[    0.428920] dwc2 3f980000.usb: DWC OTG Controller
+[    0.428962] dwc2 3f980000.usb: new USB bus registered, assigned bus number 1
+[    0.429009] dwc2 3f980000.usb: irq 41, io mem 0x3f980000
+[    0.429339] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[    0.429356] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    0.429370] usb usb1: Product: DWC OTG Controller
+[    0.429384] usb usb1: Manufacturer: Linux 4.12.2-v8 dwc2_hsotg
+[    0.429397] usb usb1: SerialNumber: 3f980000.usb
+[    0.430208] hub 1-0:1.0: USB hub found
+[    0.430263] hub 1-0:1.0: 1 port detected
+[    0.431119] usbcore: registered new interface driver usb-storage
+[    0.431467] bcm2835_thermal 3f212000.thermal: Missing firmware node
+[    0.450317] bcm2835_thermal: probe of 3f212000.thermal failed with error -2
+[    0.450982] bcm2835-wdt 3f100000.watchdog: Broadcom BCM2835 watchdog timer
+[    0.451342] bcm2835-cpufreq: min=600000 max=1200000
+[    0.451970] sdhci: Secure Digital Host Controller Interface driver
+[    0.451981] sdhci: Copyright(c) Pierre Ossman
+[    0.452233] sdhost-bcm2835 3f202000.mmc: /aliases ID not available
+[    0.452585] sdhost: log_buf @ ffffff8008101000 (fac41000)
+[    0.516611] mmc0: sdhost-bcm2835 loaded - DMA enabled (>1)
+[    0.516756] Error: Driver 'sdhost-bcm2835' is already registered, aborting...
+[    0.538292] sdhci-pltfm: SDHCI platform and OF driver helper
+[    0.542690] ledtrig-cpu: registered to indicate activity on CPUs
+[    0.543374] hidraw: raw HID events driver (C) Jiri Kosina
+[    0.543575] usbcore: registered new interface driver usbhid
+[    0.543585] usbhid: USB HID core driver
+[    0.543860] Initializing XFRM netlink socket
+[    0.543902] NET: Registered protocol family 17
+[    0.544048] Key type dns_resolver registered
+[    0.544595] Enabled cp15_barrier support
+[    0.544622] Enabled setend support
+[    0.545696] registered taskstats version 1
+[    0.557131] of_cfs_init
+[    0.557274] of_cfs_init: OK
+[    0.557963] Waiting for root device PARTUUID=0ccd8861-02...
+[    0.608918] mmc0: host does not support reading read-only switch, assuming write-enable
+[    0.610801] mmc0: new high speed SDHC card at address aaaa
+[    0.611601] mmcblk0: mmc0:aaaa SU16G 14.8 GiB
+[    0.613070]  mmcblk0: p1 p2
+[    0.622989] EXT4-fs (mmcblk0p2): INFO: recovery required on readonly filesystem
+[    0.623002] EXT4-fs (mmcblk0p2): write access will be enabled during recovery
+[    0.634856] EXT4-fs (mmcblk0p2): recovery complete
+[    0.702606] EXT4-fs (mmcblk0p2): mounted filesystem with ordered data mode. Opts: (null)
+[    0.702673] VFS: Mounted root (ext4 filesystem) readonly on device 179:2.
+[    0.703682] devtmpfs: mounted
+[    0.707885] Freeing unused kernel memory: 2496K
+[    0.797553] usb 1-1: new high-speed USB device number 2 using dwc2
+[    0.965825] usb 1-1: New USB device found, idVendor=0424, idProduct=9514
+[    0.965846] usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[    0.966655] hub 1-1:1.0: USB hub found
+[    0.966751] hub 1-1:1.0: 5 ports detected
+[    1.142512] random: fast init done
+[    1.144828] systemd[1]: System time before build time, advancing clock.
+[    1.253569] usb 1-1.1: new high-speed USB device number 3 using dwc2
+[    1.310208] NET: Registered protocol family 10
+[    1.311831] Segment Routing with IPv6
+[    1.325868] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    1.342012] usb 1-1.1: New USB device found, idVendor=0424, idProduct=ec00
+[    1.342032] usb 1-1.1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[    1.344946] smsc95xx v1.0.6
+[    1.354606] systemd[1]: systemd 232 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD +IDN)
+[    1.355254] systemd[1]: Detected architecture arm64.
+[    1.356569] systemd[1]: Set hostname to <raspberrypi>.
+[    1.392324] smsc95xx 1-1.1:1.0 eth0: register 'smsc95xx' at usb-3f980000.usb-1.1, smsc95xx USB 2.0 Ethernet, b8:27:eb:9f:66:9d
+[    1.442484] uart-pl011 3f201000.serial: no DMA platform data
+[    1.468567] usb 1-1.3: new low-speed USB device number 4 using dwc2
+[    1.560364] usb 1-1.3: New USB device found, idVendor=17ef, idProduct=600e
+[    1.560384] usb 1-1.3: New USB device strings: Mfr=0, Product=2, SerialNumber=0
+[    1.560398] usb 1-1.3: Product: Lenovo Optical Mouse
+[    1.566906] input: Lenovo Optical Mouse as /devices/platform/soc/3f980000.usb/usb1/1-1/1-1.3/1-1.3:1.0/0003:17EF:600E.0001/input/input0
+[    1.567176] hid-generic 0003:17EF:600E.0001: input,hidraw0: USB HID v1.11 Mouse [Lenovo Optical Mouse] on usb-3f980000.usb-1.3/input0
+[    1.643563] usb 1-1.5: new low-speed USB device number 5 using dwc2
+[    1.740322] usb 1-1.5: New USB device found, idVendor=04b3, idProduct=3025
+[    1.740343] usb 1-1.5: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    1.740357] usb 1-1.5: Product: USB NetVista Full Width Keyboard.
+[    1.740371] usb 1-1.5: Manufacturer: LITE-ON Technology
+[    1.748767] input: LITE-ON Technology USB NetVista Full Width Keyboard. as /devices/platform/soc/3f980000.usb/usb1/1-1/1-1.5/1-1.5:1.0/0003:04B3:3025.0002/input/input1
+[    1.801363] hid-generic 0003:04B3:3025.0002: input,hidraw1: USB HID v1.10 Keyboard [LITE-ON Technology USB NetVista Full Width Keyboard.] on usb-3f980000.usb-1.5/input0
+[    1.873686] systemd[1]: Listening on Syslog Socket.
+[    1.874160] systemd[1]: Reached target Swap.
+[    1.875079] systemd[1]: Created slice User and Session Slice.
+[    1.875403] systemd[1]: Listening on udev Kernel Socket.
+[    1.875814] systemd[1]: Listening on Journal Socket.
+[    1.876168] systemd[1]: Listening on udev Control Socket.
+[    1.876645] systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+[    1.998688] i2c /dev entries driver
+[    2.515469] random: crng init done
+[    3.256694] EXT4-fs (mmcblk0p2): re-mounted. Opts: (null)
+[    3.335277] systemd-journald[117]: Received request to flush runtime journal from PID 1
+[    3.614393] vchiq: module is from the staging directory, the quality is unknown, you have been warned.
+[    3.635971] i2c-bcm2835 3f805000.i2c: Could not read clock-frequency property
+[    3.643423] vchiq: vchiq_init_state: slot_zero = ffffff80082f1000, is_master = 0
+[    3.873778] snd_bcm2835: module is from the staging directory, the quality is unknown, you have been warned.
+[    3.887488] bcm2835_alsa bcm2835_alsa: card created with 8 channels
+[    4.057084] smsc95xx 1-1.1:1.0 enxb827eb9f669d: renamed from eth0
+[    4.113706] vc4_hdmi 3f902000.hdmi: vc4-hdmi-hifi <-> 3f902000.hdmi mapping ok
+[    4.113739] vc4_hdmi 3f902000.hdmi: ASoC: no DMI vendor name!
+[    4.117896] vc4-drm soc:gpu: bound 3f902000.hdmi (ops vc4_hdmi_ops [vc4])
+[    4.118248] vc4-drm soc:gpu: bound 3f806000.vec (ops vc4_vec_ops [vc4])
+[    4.118390] vc4-drm soc:gpu: bound 3f400000.hvs (ops vc4_hvs_ops [vc4])
+[    4.122696] vc4-drm soc:gpu: bound 3f206000.pixelvalve (ops vc4_crtc_ops [vc4])
+[    4.123047] vc4-drm soc:gpu: bound 3f207000.pixelvalve (ops vc4_crtc_ops [vc4])
+[    4.123337] vc4-drm soc:gpu: bound 3f807000.pixelvalve (ops vc4_crtc_ops [vc4])
+[    4.123540] vc4-drm soc:gpu: bound 3fc00000.v3d (ops vc4_v3d_ops [vc4])
+[    4.130659] [drm] Initialized vc4 0.0.0 20140616 for soc:gpu on minor 0
+[    4.130682] [drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[    4.130692] [drm] Driver supports precise vblank timestamp query.
+[    4.184443] Console: switching to colour frame buffer device 170x48
+[    4.223619] vc4-drm soc:gpu: fb0:  frame buffer device
+[    5.666740] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    5.666770] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    5.666839] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    5.666854] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    5.666962] [drm:vc4_bo_create [vc4]] *ERROR* Failed to allocate from CMA:
+[    5.666983] [drm] num bos allocated: 2
+[    5.666995] [drm] size bos allocated: 4356kb
+[    5.667005] [drm] num bos used: 2
+[    5.667016] [drm] size bos used: 4356kb
+[    5.667026] [drm] num bos cached: 0
+[    5.667036] [drm] size bos cached: 0kb
+[    5.667292] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    5.667309] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    5.667342] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    5.667357] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    5.667449] [drm:vc4_bo_create [vc4]] *ERROR* Failed to allocate from CMA:
+[    5.667471] [drm] num bos allocated: 2
+[    5.667482] [drm] size bos allocated: 4356kb
+[    5.667608] [drm] num bos used: 2
+[    5.667620] [drm] size bos used: 4356kb
+[    5.667638] [drm] num bos cached: 0
+[    5.667648] [drm] size bos cached: 0kb
+[    5.667848] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    5.667865] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    5.667899] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    5.667915] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    5.668016] [drm:vc4_bo_create [vc4]] *ERROR* Failed to allocate from CMA:
+[    5.668027] [drm] num bos allocated: 2
+[    5.668037] [drm] size bos allocated: 4356kb
+[    5.668048] [drm] num bos used: 2
+[    5.668058] [drm] size bos used: 4356kb
+[    5.668068] [drm] num bos cached: 0
+[    5.668078] [drm] size bos cached: 0kb
+[    6.269650] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    6.269682] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    6.269728] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    6.269744] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    6.269850] [drm:vc4_bo_create [vc4]] *ERROR* Failed to allocate from CMA:
+[    6.269877] [drm] num bos allocated: 2
+[    6.269888] [drm] size bos allocated: 4356kb
+[    6.269898] [drm] num bos used: 2
+[    6.269908] [drm] size bos used: 4356kb
+[    6.269918] [drm] num bos cached: 0
+[    6.269929] [drm] size bos cached: 0kb
+[    6.273226] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    6.273255] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    6.273294] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    6.273309] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    6.273417] [drm:vc4_bo_create [vc4]] *ERROR* Failed to allocate from CMA:
+[    6.273429] [drm] num bos allocated: 2
+[    6.273439] [drm] size bos allocated: 4356kb
+[    6.273450] [drm] num bos used: 2
+[    6.273460] [drm] size bos used: 4356kb
+[    6.273470] [drm] num bos cached: 0
+[    6.273480] [drm] size bos cached: 0kb
+[    6.348661] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    6.348698] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    6.348745] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    6.348761] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    6.348875] [drm:vc4_bo_create [vc4]] *ERROR* Failed to allocate from CMA:
+[    6.348887] [drm] num bos allocated: 2
+[    6.348900] [drm] size bos allocated: 4356kb
+[    6.348910] [drm] num bos used: 2
+[    6.348938] [drm] size bos used: 4356kb
+[    6.348949] [drm] num bos cached: 0
+[    6.348959] [drm] size bos cached: 0kb
+[    6.350647] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    6.350681] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    6.350720] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    6.350736] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    6.350847] [drm:vc4_bo_create [vc4]] *ERROR* Failed to allocate from CMA:
+[    6.350872] [drm] num bos allocated: 2
+[    6.350883] [drm] size bos allocated: 4356kb
+[    6.350893] [drm] num bos used: 2
+[    6.350904] [drm] size bos used: 4356kb
+[    6.350914] [drm] num bos cached: 0
+[    6.350924] [drm] size bos cached: 0kb
+[    6.407582] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    6.407614] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    6.407654] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    6.407669] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    6.407778] [drm:vc4_bo_create [vc4]] *ERROR* Failed to allocate from CMA:
+[    6.407790] [drm] num bos allocated: 2
+[    6.407800] [drm] size bos allocated: 4356kb
+[    6.407811] [drm] num bos used: 2
+[    6.407821] [drm] size bos used: 4356kb
+[    6.407832] [drm] num bos cached: 0
+[    6.407842] [drm] size bos cached: 0kb
+[    6.408004] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    6.408020] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    6.408062] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    6.408077] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    6.408169] [drm:vc4_bo_create [vc4]] *ERROR* Failed to allocate from CMA:
+[    6.408180] [drm] num bos allocated: 2
+[    6.408190] [drm] size bos allocated: 4356kb
+[    6.408201] [drm] num bos used: 2
+[    6.408211] [drm] size bos used: 4356kb
+[    6.408222] [drm] num bos cached: 0
+[    6.408232] [drm] size bos cached: 0kb
+[    6.428074] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    6.428104] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    6.428143] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    6.428158] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    6.428275] [drm:vc4_bo_create [vc4]] *ERROR* Failed to allocate from CMA:
+[    6.428287] [drm] num bos allocated: 2
+[    6.428298] [drm] size bos allocated: 4356kb
+[    6.428308] [drm] num bos used: 2
+[    6.428318] [drm] size bos used: 4356kb
+[    6.428328] [drm] num bos cached: 0
+[    6.428339] [drm] size bos cached: 0kb
+[    6.448085] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    6.448114] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    6.448150] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    6.448166] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    6.448274] [drm:vc4_bo_create [vc4]] *ERROR* Failed to allocate from CMA:
+[    6.448285] [drm] num bos allocated: 2
+[    6.448304] [drm] size bos allocated: 4356kb
+[    6.448315] [drm] num bos used: 2
+[    6.448325] [drm] size bos used: 4356kb
+[    6.448335] [drm] num bos cached: 0
+[    6.448345] [drm] size bos cached: 0kb
+[    6.509409] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    6.509443] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    6.509484] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    6.512366] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    6.512507] [drm:vc4_bo_create [vc4]] *ERROR* Failed to allocate from CMA:
+[    6.515595] [drm] num bos allocated: 2
+[    6.515610] [drm] size bos allocated: 4356kb
+[    6.515620] [drm] num bos used: 2
+[    6.515631] [drm] size bos used: 4356kb
+[    6.515641] [drm] num bos cached: 0
+[    6.515651] [drm] size bos cached: 0kb
+[    6.515911] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    6.515937] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    6.515975] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    6.515990] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    6.516105] [drm:vc4_bo_create [vc4]] *ERROR* Failed to allocate from CMA:
+[    6.516116] [drm] num bos allocated: 2
+[    6.516126] [drm] size bos allocated: 4356kb
+[    6.516136] [drm] num bos used: 2
+[    6.516147] [drm] size bos used: 4356kb
+[    6.516157] [drm] num bos cached: 0
+[    6.516167] [drm] size bos cached: 0kb
+[    6.535981] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    6.536014] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    6.536055] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    6.536070] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    6.536183] [drm:vc4_bo_create [vc4]] *ERROR* Failed to allocate from CMA:
+[    6.536195] [drm] num bos allocated: 2
+[    6.536206] [drm] size bos allocated: 4356kb
+[    6.536216] [drm] num bos used: 2
+[    6.536227] [drm] size bos used: 4356kb
+[    6.536237] [drm] num bos cached: 0
+[    6.536247] [drm] size bos cached: 0kb
+[    6.593733] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    6.593767] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    6.593819] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    6.593834] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    6.593946] [drm:vc4_bo_create [vc4]] *ERROR* Failed to allocate from CMA:
+[    6.593957] [drm] num bos allocated: 2
+[    6.593968] [drm] size bos allocated: 4356kb
+[    6.593978] [drm] num bos used: 2
+[    6.593989] [drm] size bos used: 4356kb
+[    6.593999] [drm] num bos cached: 0
+[    6.594009] [drm] size bos cached: 0kb
+[    6.594190] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    6.594209] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    6.594242] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    6.594257] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    6.594354] [drm:vc4_bo_create [vc4]] *ERROR* Failed to allocate from CMA:
+[    6.594375] [drm] num bos allocated: 2
+[    6.594385] [drm] size bos allocated: 4356kb
+[    6.594395] [drm] num bos used: 2
+[    6.594406] [drm] size bos used: 4356kb
+[    6.594416] [drm] num bos cached: 0
+[    6.594426] [drm] size bos cached: 0kb
+[    6.614264] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    6.614293] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    6.614331] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    6.614346] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    6.614451] [drm:vc4_bo_create [vc4]] *ERROR* Failed to allocate from CMA:
+[    6.614473] [drm] num bos allocated: 2
+[    6.614484] [drm] size bos allocated: 4356kb
+[    6.614563] [drm] num bos used: 2
+[    6.614575] [drm] size bos used: 4356kb
+[    6.614585] [drm] num bos cached: 0
+[    6.614595] [drm] size bos cached: 0kb
+[    6.677191] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    6.677220] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    6.677261] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    6.677276] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    6.677381] [drm:vc4_bo_create [vc4]] *ERROR* Failed to allocate from CMA:
+[    6.677393] [drm] num bos allocated: 2
+[    6.677404] [drm] size bos allocated: 4356kb
+[    6.677414] [drm] num bos used: 2
+[    6.677435] [drm] size bos used: 4356kb
+[    6.677445] [drm] num bos cached: 0
+[    6.677456] [drm] size bos cached: 0kb
+[    6.677708] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    6.677725] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    6.677758] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    6.677774] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    6.677864] [drm:vc4_bo_create [vc4]] *ERROR* Failed to allocate from CMA:
+[    6.677874] [drm] num bos allocated: 2
+[    6.677885] [drm] size bos allocated: 4356kb
+[    6.677894] [drm] num bos used: 2
+[    6.677905] [drm] size bos used: 4356kb
+[    6.677915] [drm] num bos cached: 0
+[    6.677939] [drm] size bos cached: 0kb
+[    6.697792] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    6.697822] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    6.697862] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    6.697878] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    6.697986] [drm:vc4_bo_create [vc4]] *ERROR* Failed to allocate from CMA:
+[    6.698008] [drm] num bos allocated: 2
+[    6.698019] [drm] size bos allocated: 4356kb
+[    6.698029] [drm] num bos used: 2
+[    6.698040] [drm] size bos used: 4356kb
+[    6.698050] [drm] num bos cached: 0
+[    6.698060] [drm] size bos cached: 0kb
+[    6.791347] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    6.791381] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    6.791422] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    6.791438] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    6.791552] [drm:vc4_bo_create [vc4]] *ERROR* Failed to allocate from CMA:
+[    6.791942] [drm] num bos allocated: 2
+[    6.791953] [drm] size bos allocated: 4356kb
+[    6.791964] [drm] num bos used: 2
+[    6.791975] [drm] size bos used: 4356kb
+[    6.791985] [drm] num bos cached: 0
+[    6.791996] [drm] size bos cached: 0kb
+[    6.792241] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    6.792262] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    6.792300] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    6.792315] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    6.792417] [drm:vc4_bo_create [vc4]] *ERROR* Failed to allocate from CMA:
+[    6.792428] [drm] num bos allocated: 2
+[    6.792439] [drm] size bos allocated: 4356kb
+[    6.792449] [drm] num bos used: 2
+[    6.792469] [drm] size bos used: 4356kb
+[    6.792479] [drm] num bos cached: 0
+[    6.792572] [drm] size bos cached: 0kb
+[    6.858680] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    6.858722] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    6.858767] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    6.858783] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    6.858896] [drm:vc4_bo_create [vc4]] *ERROR* Failed to allocate from CMA:
+[    6.858907] [drm] num bos allocated: 2
+[    6.858918] [drm] size bos allocated: 4356kb
+[    6.858928] [drm] num bos used: 2
+[    6.858939] [drm] size bos used: 4356kb
+[    6.858950] [drm] num bos cached: 0
+[    6.858960] [drm] size bos cached: 0kb
+[    6.859140] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    6.859157] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    6.859201] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    6.859217] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    6.859310] [drm:vc4_bo_create [vc4]] *ERROR* Failed to allocate from CMA:
+[    6.859321] [drm] num bos allocated: 2
+[    6.859331] [drm] size bos allocated: 4356kb
+[    6.859341] [drm] num bos used: 2
+[    6.859352] [drm] size bos used: 4356kb
+[    6.859364] [drm] num bos cached: 0
+[    6.859374] [drm] size bos cached: 0kb
+[    6.925114] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    6.925144] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    6.925183] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    6.925198] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    6.925308] [drm:vc4_bo_create [vc4]] *ERROR* Failed to allocate from CMA:
+[    6.925320] [drm] num bos allocated: 2
+[    6.925331] [drm] size bos allocated: 4356kb
+[    6.925341] [drm] num bos used: 2
+[    6.925352] [drm] size bos used: 4356kb
+[    6.925362] [drm] num bos cached: 0
+[    6.925372] [drm] size bos cached: 0kb
+[    6.926648] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    6.926682] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    6.926723] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    6.926738] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    6.926853] [drm:vc4_bo_create [vc4]] *ERROR* Failed to allocate from CMA:
+[    6.926865] [drm] num bos allocated: 2
+[    6.926875] [drm] size bos allocated: 4356kb
+[    6.926886] [drm] num bos used: 2
+[    6.926897] [drm] size bos used: 4356kb
+[    6.926908] [drm] num bos cached: 0
+[    6.926918] [drm] size bos cached: 0kb
+[    6.954851] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    6.954885] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    6.954942] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    6.954957] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    6.955079] [drm:vc4_bo_create [vc4]] *ERROR* Failed to allocate from CMA:
+[    6.955090] [drm] num bos allocated: 2
+[    6.955101] [drm] size bos allocated: 4356kb
+[    6.955112] [drm] num bos used: 2
+[    6.955122] [drm] size bos used: 4356kb
+[    6.955132] [drm] num bos cached: 0
+[    6.955142] [drm] size bos cached: 0kb
+[    7.007943] smsc95xx 1-1.1:1.0 enxb827eb9f669d: hardware isn't capable of remote wakeup
+[    7.016348] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    7.016384] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    7.016429] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    7.016445] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    7.016562] [drm:vc4_bo_create [vc4]] *ERROR* Failed to allocate from CMA:
+[    7.017321] [drm] num bos allocated: 2
+[    7.017333] [drm] size bos allocated: 4356kb
+[    7.017344] [drm] num bos used: 2
+[    7.017354] [drm] size bos used: 4356kb
+[    7.017364] [drm] num bos cached: 0
+[    7.017374] [drm] size bos cached: 0kb
+[    7.018453] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    7.018482] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    7.018952] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    7.018972] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    7.019082] [drm:vc4_bo_create [vc4]] *ERROR* Failed to allocate from CMA:
+[    7.019108] [drm] num bos allocated: 2
+[    7.019119] [drm] size bos allocated: 4356kb
+[    7.019131] [drm] num bos used: 2
+[    7.019141] [drm] size bos used: 4356kb
+[    7.019151] [drm] num bos cached: 0
+[    7.019161] [drm] size bos cached: 0kb
+[    7.124732] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    7.124764] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    7.124805] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    7.124821] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    7.124928] [drm:vc4_bo_create [vc4]] *ERROR* Failed to allocate from CMA:
+[    7.124940] [drm] num bos allocated: 2
+[    7.124951] [drm] size bos allocated: 4356kb
+[    7.124962] [drm] num bos used: 2
+[    7.124972] [drm] size bos used: 4356kb
+[    7.124982] [drm] num bos cached: 0
+[    7.124993] [drm] size bos cached: 0kb
+[    7.125191] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    7.125208] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    7.125244] cma: cma_alloc: alloc failed, req-size: 1025 pages, ret: -12
+[    7.125259] vc4-drm soc:gpu: failed to allocate buffer with size 4198400
+[    7.125355] [drm:vc4_bo_create [vc4]] *ERROR* Failed to allocate from CMA:
+[    7.125366] [drm] num bos allocated: 2
+[    7.125377] [drm] size bos allocated: 4356kb
+[    7.125387] [drm] num bos used: 2
+[    7.125397] [drm] size bos used: 4356kb
+[    7.125407] [drm] num bos cached: 0
+[    7.125417] [drm] size bos cached: 0kb
+[    7.216945] Adding 102396k swap on /var/swap.  Priority:-1 extents:1 across:102396k SSFS
+[    8.634648] smsc95xx 1-1.1:1.0 enxb827eb9f669d: link up, 100Mbps, full-duplex, lpa 0x41E1
+[   13.799577] fuse init (API version 7.26)
+[   92.027996] Bluetooth: Core ver 2.22
+[   92.028071] NET: Registered protocol family 31
+[   92.028077] Bluetooth: HCI device and connection manager initialized
+[   92.028094] Bluetooth: HCI socket layer initialized
+[   92.028105] Bluetooth: L2CAP socket layer initialized
+[   92.028139] Bluetooth: SCO socket layer initialized
+[  291.738148] usb 1-1.3: USB disconnect, device number 4
+[  291.961560] usb 1-1.3: new low-speed USB device number 6 using dwc2
+[  292.054834] usb 1-1.3: New USB device found, idVendor=17ef, idProduct=600e
+[  292.054855] usb 1-1.3: New USB device strings: Mfr=0, Product=2, SerialNumber=0
+[  292.054869] usb 1-1.3: Product: Lenovo Optical Mouse
+[  292.062212] input: Lenovo Optical Mouse as /devices/platform/soc/3f980000.usb/usb1/1-1/1-1.3/1-1.3:1.0/0003:17EF:600E.0003/input/input2
+[  292.063482] hid-generic 0003:17EF:600E.0003: input,hidraw0: USB HID v1.11 Mouse [Lenovo Optical Mouse] on usb-3f980000.usb-1.3/input0

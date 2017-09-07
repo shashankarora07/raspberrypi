@@ -1,0 +1,340 @@
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.9.41-v7+ (dc4@dc4-XPS13-9333) (gcc version 4.9.3 (crosstool-NG crosstool-ng-1.22.0-88-g8460611) ) #1023 SMP Tue Aug 8 16:00:15 BST 2017
+[    0.000000] CPU: ARMv7 Processor [410fd034] revision 4 (ARMv7), cr=10c5383d
+[    0.000000] CPU: div instructions available: patching division code
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] OF: fdt:Machine model: Raspberry Pi 3 Model B Rev 1.2
+[    0.000000] cma: Reserved 8 MiB at 0x3ac00000
+[    0.000000] Memory policy: Data cache writealloc
+[    0.000000] On node 0 totalpages: 242688
+[    0.000000] free_area_init_node: node 0, pgdat 80c6eec0, node_mem_map ba3a1000
+[    0.000000]   Normal zone: 2133 pages used for memmap
+[    0.000000]   Normal zone: 0 pages reserved
+[    0.000000]   Normal zone: 242688 pages, LIFO batch:31
+[    0.000000] percpu: Embedded 14 pages/cpu @ba35b000 s25600 r8192 d23552 u57344
+[    0.000000] pcpu-alloc: s25600 r8192 d23552 u57344 alloc=14*4096
+[    0.000000] pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 240555
+[    0.000000] Kernel command line: 8250.nr_uarts=0 bcm2708_fb.fbwidth=1366 bcm2708_fb.fbheight=768 bcm2708_fb.fbswap=1 vc_mem.mem_base=0x3ec00000 vc_mem.mem_size=0x40000000  dwc_otg.lpm_enable=0 console=ttyS0,115200 console=tty1 root=PARTUUID=0ccd8861-02 rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait quiet splash plymouth.ignore-serial-consoles
+[    0.000000] PID hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.000000] Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+[    0.000000] Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Memory: 940356K/970752K available (7168K kernel code, 484K rwdata, 2012K rodata, 1024K init, 778K bss, 22204K reserved, 8192K cma-reserved)
+[    0.000000] Virtual kernel memory layout:
+                   vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+                   fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+                   vmalloc : 0xbb800000 - 0xff800000   (1088 MB)
+                   lowmem  : 0x80000000 - 0xbb400000   ( 948 MB)
+                   modules : 0x7f000000 - 0x80000000   (  16 MB)
+                     .text : 0x80008000 - 0x80800000   (8160 kB)
+                     .init : 0x80b00000 - 0x80c00000   (1024 kB)
+                     .data : 0x80c00000 - 0x80c79094   ( 485 kB)
+                      .bss : 0x80c7b000 - 0x80d3da64   ( 779 kB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] Hierarchical RCU implementation.
+[    0.000000] 	Build-time adjustment of leaf fanout to 32.
+[    0.000000] NR_IRQS:16 nr_irqs:16 16
+[    0.000000] arm_arch_timer: Architected cp15 timer(s) running at 19.20MHz (phys).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x46d987e47, max_idle_ns: 440795202767 ns
+[    0.000007] sched_clock: 56 bits at 19MHz, resolution 52ns, wraps every 4398046511078ns
+[    0.000018] Switching to timer-based delay loop, resolution 52ns
+[    0.000291] Console: colour dummy device 80x30
+[    0.000307] console [tty1] enabled
+[    0.000327] Calibrating delay loop (skipped), value calculated using timer frequency.. 38.40 BogoMIPS (lpj=192000)
+[    0.000342] pid_max: default: 32768 minimum: 301
+[    0.000648] Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.000657] Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.001518] Disabling cpuset control group subsystem
+[    0.001644] CPU: Testing write buffer coherency: ok
+[    0.001678] ftrace: allocating 22396 entries in 66 pages
+[    0.048086] CPU0: update cpu_capacity 1024
+[    0.048101] CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+[    0.048138] Setting up static identity map for 0x100000 - 0x100034
+[    0.049980] CPU1: update cpu_capacity 1024
+[    0.049987] CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+[    0.050670] CPU2: update cpu_capacity 1024
+[    0.050676] CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+[    0.051338] CPU3: update cpu_capacity 1024
+[    0.051344] CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+[    0.051433] Brought up 4 CPUs
+[    0.051443] SMP: Total of 4 processors activated (153.60 BogoMIPS).
+[    0.051448] CPU: All CPU(s) started in HYP mode.
+[    0.051451] CPU: Virtualization extensions available.
+[    0.052238] devtmpfs: initialized
+[    0.063521] VFP support v0.3: implementor 41 architecture 3 part 40 variant 3 rev 4
+[    0.063797] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.063814] futex hash table entries: 1024 (order: 4, 65536 bytes)
+[    0.064343] pinctrl core: initialized pinctrl subsystem
+[    0.065232] NET: Registered protocol family 16
+[    0.067561] DMA: preallocated 1024 KiB pool for atomic coherent allocations
+[    0.076484] hw-breakpoint: found 5 (+1 reserved) breakpoint and 4 watchpoint registers.
+[    0.076490] hw-breakpoint: maximum watchpoint size is 8 bytes.
+[    0.076634] Serial: AMBA PL011 UART driver
+[    0.078509] bcm2835-mbox 3f00b880.mailbox: mailbox enabled
+[    0.079027] uart-pl011 3f201000.serial: could not find pctldev for node /soc/gpio@7e200000/uart0_pins, deferring probe
+[    0.148908] bcm2835-dma 3f007000.dma: DMA legacy API manager at bb80f000, dmachans=0x1
+[    0.150714] SCSI subsystem initialized
+[    0.150870] usbcore: registered new interface driver usbfs
+[    0.150944] usbcore: registered new interface driver hub
+[    0.151034] usbcore: registered new device driver usb
+[    0.157891] raspberrypi-firmware soc:firmware: Attached to firmware from 2017-08-08 12:01
+[    0.159375] clocksource: Switched to clocksource arch_sys_counter
+[    0.206501] VFS: Disk quotas dquot_6.6.0
+[    0.206577] VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+[    0.206767] FS-Cache: Loaded
+[    0.207011] CacheFiles: Loaded
+[    0.219106] NET: Registered protocol family 2
+[    0.220011] TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.220119] TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.220304] TCP: Hash tables configured (established 8192 bind 8192)
+[    0.220391] UDP hash table entries: 512 (order: 2, 16384 bytes)
+[    0.220432] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+[    0.220638] NET: Registered protocol family 1
+[    0.221052] RPC: Registered named UNIX socket transport module.
+[    0.221057] RPC: Registered udp transport module.
+[    0.221062] RPC: Registered tcp transport module.
+[    0.221066] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.222109] hw perfevents: enabled with armv7_cortex_a7 PMU driver, 7 counters available
+[    0.224364] workingset: timestamp_bits=14 max_order=18 bucket_order=4
+[    0.240363] FS-Cache: Netfs 'nfs' registered for caching
+[    0.241327] NFS: Registering the id_resolver key type
+[    0.241352] Key type id_resolver registered
+[    0.241356] Key type id_legacy registered
+[    0.243762] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 251)
+[    0.243865] io scheduler noop registered
+[    0.243870] io scheduler deadline registered (default)
+[    0.244171] io scheduler cfq registered
+[    0.249776] BCM2708FB: allocated DMA memory fad10000
+[    0.249799] BCM2708FB: allocated DMA channel 0 @ bb80f000
+[    0.279571] Console: switching to colour frame buffer device 170x48
+[    0.297895] bcm2835-rng 3f104000.rng: hwrng registered
+[    0.298002] vc-cma: Videocore CMA driver
+[    0.298007] vc-cma: vc_cma_base      = 0x00000000
+[    0.298013] vc-cma: vc_cma_size      = 0x00000000 (0 MiB)
+[    0.298018] vc-cma: vc_cma_initial   = 0x00000000 (0 MiB)
+[    0.298223] vc-mem: phys_addr:0x00000000 mem_base=0x3ec00000 mem_size:0x40000000(1024 MiB)
+[    0.313518] brd: module loaded
+[    0.322324] loop: module loaded
+[    0.322336] Loading iSCSI transport class v2.0-870.
+[    0.322869] usbcore: registered new interface driver smsc95xx
+[    0.322884] dwc_otg: version 3.00a 10-AUG-2012 (platform bus)
+[    0.550948] Core Release: 2.80a
+[    0.550957] Setting default values for core params
+[    0.550986] Finished setting default values for core params
+[    0.751388] Using Buffer DMA mode
+[    0.751393] Periodic Transfer Interrupt Enhancement - disabled
+[    0.751397] Multiprocessor Interrupt Enhancement - disabled
+[    0.751403] OTG VER PARAM: 0, OTG VER FLAG: 0
+[    0.751417] Dedicated Tx FIFOs mode
+[    0.751755] WARN::dwc_otg_hcd_init:1032: FIQ DMA bounce buffers: virt = 0xbad04000 dma = 0xfad04000 len=9024
+[    0.751780] FIQ FSM acceleration enabled for :
+               Non-periodic Split Transactions
+               Periodic Split Transactions
+               High-Speed Isochronous Endpoints
+               Interrupt/Control Split Transaction hack enabled
+[    0.751787] dwc_otg: Microframe scheduler enabled
+[    0.751834] WARN::hcd_init_fiq:459: FIQ on core 1 at 0x8058f7fc
+[    0.751844] WARN::hcd_init_fiq:460: FIQ ASM at 0x8058fb6c length 36
+[    0.751855] WARN::hcd_init_fiq:486: MPHI regs_base at 0xbb87a000
+[    0.751913] dwc_otg 3f980000.usb: DWC OTG Controller
+[    0.751947] dwc_otg 3f980000.usb: new USB bus registered, assigned bus number 1
+[    0.751978] dwc_otg 3f980000.usb: irq 62, io mem 0x00000000
+[    0.752024] Init: Port Power? op_state=1
+[    0.752028] Init: Power Port (0)
+[    0.752229] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[    0.752239] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    0.752246] usb usb1: Product: DWC OTG Controller
+[    0.752254] usb usb1: Manufacturer: Linux 4.9.41-v7+ dwc_otg_hcd
+[    0.752261] usb usb1: SerialNumber: 3f980000.usb
+[    0.753101] hub 1-0:1.0: USB hub found
+[    0.753140] hub 1-0:1.0: 1 port detected
+[    0.753823] dwc_otg: FIQ enabled
+[    0.753827] dwc_otg: NAK holdoff enabled
+[    0.753831] dwc_otg: FIQ split-transaction FSM enabled
+[    0.753844] Module dwc_common_port init
+[    0.754076] usbcore: registered new interface driver usb-storage
+[    0.754297] mousedev: PS/2 mouse device common for all mice
+[    0.755287] bcm2835-wdt 3f100000.watchdog: Broadcom BCM2835 watchdog timer
+[    0.755561] bcm2835-cpufreq: min=600000 max=1200000
+[    0.755945] sdhci: Secure Digital Host Controller Interface driver
+[    0.755949] sdhci: Copyright(c) Pierre Ossman
+[    0.756223] sdhost-bcm2835 3f202000.sdhost: could not get clk, deferring probe
+[    0.758395] mmc-bcm2835 3f300000.mmc: could not get clk, deferring probe
+[    0.758494] sdhci-pltfm: SDHCI platform and OF driver helper
+[    0.761118] ledtrig-cpu: registered to indicate activity on CPUs
+[    0.761305] hidraw: raw HID events driver (C) Jiri Kosina
+[    0.761495] usbcore: registered new interface driver usbhid
+[    0.761499] usbhid: USB HID core driver
+[    0.762283] vchiq: vchiq_init_state: slot_zero = 0xbad80000, is_master = 0
+[    0.764298] Initializing XFRM netlink socket
+[    0.764320] NET: Registered protocol family 17
+[    0.764437] Key type dns_resolver registered
+[    0.764942] Registering SWP/SWPB emulation handler
+[    0.765627] registered taskstats version 1
+[    0.765971] vc-sm: Videocore shared memory driver
+[    0.765981] [vc_sm_connected_init]: start
+[    0.773670] [vc_sm_connected_init]: end - returning 0
+[    0.779564] 3f201000.serial: ttyAMA0 at MMIO 0x3f201000 (irq = 87, base_baud = 0) is a PL011 rev2
+[    0.781094] sdhost: log_buf @ bad07000 (fad07000)
+[    0.859406] mmc0: sdhost-bcm2835 loaded - DMA enabled (>1)
+[    0.861615] mmc-bcm2835 3f300000.mmc: mmc_debug:0 mmc_debug2:0
+[    0.861622] mmc-bcm2835 3f300000.mmc: DMA channel allocated
+[    0.919506] of_cfs_init
+[    0.919599] of_cfs_init: OK
+[    0.920082] Waiting for root device PARTUUID=0ccd8861-02...
+[    0.938505] mmc1: queuing unknown CIS tuple 0x80 (2 bytes)
+[    0.940070] mmc1: queuing unknown CIS tuple 0x80 (3 bytes)
+[    0.941617] mmc1: queuing unknown CIS tuple 0x80 (3 bytes)
+[    0.944396] mmc1: queuing unknown CIS tuple 0x80 (7 bytes)
+[    0.969479] Indeed it is in host mode hprt0 = 00021501
+[    1.036975] mmc0: host does not support reading read-only switch, assuming write-enable
+[    1.038834] mmc0: new high speed SDHC card at address aaaa
+[    1.039388] random: fast init done
+[    1.039501] mmcblk0: mmc0:aaaa SU16G 14.8 GiB
+[    1.040916]  mmcblk0: p1 p2
+[    1.098037] mmc1: new high speed SDIO card at address 0001
+[    1.169420] usb 1-1: new high-speed USB device number 2 using dwc_otg
+[    1.169558] Indeed it is in host mode hprt0 = 00001101
+[    1.171050] EXT4-fs (mmcblk0p2): mounted filesystem with ordered data mode. Opts: (null)
+[    1.171096] VFS: Mounted root (ext4 filesystem) readonly on device 179:2.
+[    1.171865] devtmpfs: mounted
+[    1.231337] Freeing unused kernel memory: 1024K (80b00000 - 80c00000)
+[    1.399704] usb 1-1: New USB device found, idVendor=0424, idProduct=9514
+[    1.399717] usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[    1.400545] hub 1-1:1.0: USB hub found
+[    1.400633] hub 1-1:1.0: 5 ports detected
+[    1.641205] systemd[1]: System time before build time, advancing clock.
+[    1.719427] usb 1-1.1: new high-speed USB device number 3 using dwc_otg
+[    1.764273] NET: Registered protocol family 10
+[    1.775149] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    1.799789] systemd[1]: systemd 232 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD +IDN)
+[    1.800367] systemd[1]: Detected architecture arm.
+[    1.802109] systemd[1]: Set hostname to <raspberrypi>.
+[    1.811610] systemd[1]: Initializing machine ID from random generator.
+[    1.811777] systemd[1]: Installed transient /etc/machine-id file.
+[    1.850003] usb 1-1.1: New USB device found, idVendor=0424, idProduct=ec00
+[    1.850021] usb 1-1.1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[    1.853325] smsc95xx v1.0.5
+[    1.943237] smsc95xx 1-1.1:1.0 eth0: register 'smsc95xx' at usb-3f980000.usb-1.1, smsc95xx USB 2.0 Ethernet, b8:27:eb:9f:66:9d
+[    2.049441] usb 1-1.3: new low-speed USB device number 4 using dwc_otg
+[    2.193940] usb 1-1.3: New USB device found, idVendor=17ef, idProduct=600e
+[    2.193953] usb 1-1.3: New USB device strings: Mfr=0, Product=2, SerialNumber=0
+[    2.193961] usb 1-1.3: Product: Lenovo Optical Mouse
+[    2.200615] input: Lenovo Optical Mouse as /devices/platform/soc/3f980000.usb/usb1/1-1/1-1.3/1-1.3:1.0/0003:17EF:600E.0001/input/input0
+[    2.201037] hid-generic 0003:17EF:600E.0001: input,hidraw0: USB HID v1.11 Mouse [Lenovo Optical Mouse] on usb-3f980000.usb-1.3/input0
+[    2.283114] systemd[1]: Reached target Swap.
+[    2.283755] systemd[1]: Listening on Journal Socket (/dev/log).
+[    2.284503] systemd[1]: Created slice System Slice.
+[    2.287551] systemd[1]: Mounting Debug File System...
+[    2.288022] systemd[1]: Listening on Syslog Socket.
+[    2.299475] usb 1-1.5: new low-speed USB device number 5 using dwc_otg
+[    2.381429] i2c /dev entries driver
+[    2.464763] usb 1-1.5: New USB device found, idVendor=04b3, idProduct=3025
+[    2.464795] usb 1-1.5: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    2.464812] usb 1-1.5: Product: USB NetVista Full Width Keyboard.
+[    2.464832] usb 1-1.5: Manufacturer: LITE-ON Technology
+[    2.492831] input: LITE-ON Technology USB NetVista Full Width Keyboard. as /devices/platform/soc/3f980000.usb/usb1/1-1/1-1.5/1-1.5:1.0/0003:04B3:3025.0002/input/input1
+[    2.560366] hid-generic 0003:04B3:3025.0002: input,hidraw1: USB HID v1.10 Keyboard [LITE-ON Technology USB NetVista Full Width Keyboard.] on usb-3f980000.usb-1.5/input0
+[    2.771341] EXT4-fs (mmcblk0p2): re-mounted. Opts: (null)
+[    2.886364] systemd-journald[129]: Received request to flush runtime journal from PID 1
+[    3.411241] gpiomem-bcm2835 3f200000.gpiomem: Initialised: Registers at 0x3f200000
+[    3.671892] usbcore: registered new interface driver brcmfmac
+[    3.741750] smsc95xx 1-1.1:1.0 enxb827eb9f669d: renamed from eth0
+[    3.786755] brcmfmac: Firmware version = wl0: Aug  7 2017 00:46:29 version 7.45.41.46 (r666254 CY) FWID 01-f8a78378
+[    4.711374] uart-pl011 3f201000.serial: no DMA platform data
+[    5.374915] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[    5.374973] brcmfmac: power management disabled
+[    5.721664] smsc95xx 1-1.1:1.0 enxb827eb9f669d: hardware isn't capable of remote wakeup
+[    5.721906] IPv6: ADDRCONF(NETDEV_UP): enxb827eb9f669d: link is not ready
+[    6.653007] EXT4-fs (mmcblk0p2): resizing filesystem from 1186387 to 3877760 blocks
+[    7.173876] Adding 102396k swap on /var/swap.  Priority:-1 extents:1 across:102396k SSFS
+[    7.346263] EXT4-fs (mmcblk0p2): resized filesystem to 3877760
+[    8.576092] systemd[1]: apt-daily-upgrade.timer: Adding 48min 25.169524s random time.
+[    8.578920] systemd[1]: apt-daily.timer: Adding 52min 55.626624s random time.
+[    9.134152] Bluetooth: Core ver 2.22
+[    9.134206] NET: Registered protocol family 31
+[    9.134209] Bluetooth: HCI device and connection manager initialized
+[    9.134221] Bluetooth: HCI socket layer initialized
+[    9.134229] Bluetooth: L2CAP socket layer initialized
+[    9.134246] Bluetooth: SCO socket layer initialized
+[    9.149504] Bluetooth: HCI UART driver ver 2.3
+[    9.149512] Bluetooth: HCI UART protocol H4 registered
+[    9.149514] Bluetooth: HCI UART protocol Three-wire (H5) registered
+[    9.149614] Bluetooth: HCI UART protocol Broadcom registered
+[    9.406968] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[    9.406974] Bluetooth: BNEP filters: protocol multicast
+[    9.406985] Bluetooth: BNEP socket layer initialized
+[    9.464215] Bluetooth: RFCOMM TTY layer initialized
+[    9.464237] Bluetooth: RFCOMM socket layer initialized
+[    9.464256] Bluetooth: RFCOMM ver 1.11
+[   10.318448] systemd[1]: apt-daily-upgrade.timer: Adding 14min 55.328843s random time.
+[   10.321784] systemd[1]: apt-daily.timer: Adding 1h 31min 5.743240s random time.
+[   12.998338] fuse init (API version 7.26)
+[   40.658928] random: crng init done
+[  944.080053] usb 1-1.3: USB disconnect, device number 4
+[  944.479427] usb 1-1.3: new low-speed USB device number 6 using dwc_otg
+[  944.613683] usb 1-1.3: New USB device found, idVendor=17ef, idProduct=600e
+[  944.613696] usb 1-1.3: New USB device strings: Mfr=0, Product=2, SerialNumber=0
+[  944.613704] usb 1-1.3: Product: Lenovo Optical Mouse
+[  944.620177] input: Lenovo Optical Mouse as /devices/platform/soc/3f980000.usb/usb1/1-1/1-1.3/1-1.3:1.0/0003:17EF:600E.0003/input/input2
+[  944.620920] hid-generic 0003:17EF:600E.0003: input,hidraw0: USB HID v1.11 Mouse [Lenovo Optical Mouse] on usb-3f980000.usb-1.3/input0
+[  996.396303] IPv6: ADDRCONF(NETDEV_CHANGE): enxb827eb9f669d: link becomes ready
+[  996.397129] smsc95xx 1-1.1:1.0 enxb827eb9f669d: link up, 100Mbps, full-duplex, lpa 0x41E1
+[ 1113.345522] usb 1-1.3: USB disconnect, device number 6
+[ 1113.725415] usb 1-1.3: new low-speed USB device number 7 using dwc_otg
+[ 1113.860191] usb 1-1.3: New USB device found, idVendor=17ef, idProduct=600e
+[ 1113.860205] usb 1-1.3: New USB device strings: Mfr=0, Product=2, SerialNumber=0
+[ 1113.860213] usb 1-1.3: Product: Lenovo Optical Mouse
+[ 1113.866786] input: Lenovo Optical Mouse as /devices/platform/soc/3f980000.usb/usb1/1-1/1-1.3/1-1.3:1.0/0003:17EF:600E.0004/input/input3
+[ 1113.867583] hid-generic 0003:17EF:600E.0004: input,hidraw0: USB HID v1.11 Mouse [Lenovo Optical Mouse] on usb-3f980000.usb-1.3/input0
+[ 1115.449809] usb 1-1.3: USB disconnect, device number 7
+[ 1115.829731] usb 1-1.3: new low-speed USB device number 8 using dwc_otg
+[ 1115.960685] usb 1-1.3: device descriptor read/all, error -32
+[ 1116.290484] usb 1-1.3: new low-speed USB device number 10 using dwc_otg
+[ 1116.425197] usb 1-1.3: New USB device found, idVendor=17ef, idProduct=600e
+[ 1116.425211] usb 1-1.3: New USB device strings: Mfr=0, Product=2, SerialNumber=0
+[ 1116.425219] usb 1-1.3: Product: Lenovo Optical Mouse
+[ 1116.432190] input: Lenovo Optical Mouse as /devices/platform/soc/3f980000.usb/usb1/1-1/1-1.3/1-1.3:1.0/0003:17EF:600E.0005/input/input4
+[ 1116.432903] hid-generic 0003:17EF:600E.0005: input,hidraw0: USB HID v1.11 Mouse [Lenovo Optical Mouse] on usb-3f980000.usb-1.3/input0
+[ 1246.989270] usb 1-1.3: USB disconnect, device number 10
+[ 1247.408516] usb 1-1.3: new low-speed USB device number 11 using dwc_otg
+[ 1247.542941] usb 1-1.3: New USB device found, idVendor=17ef, idProduct=600e
+[ 1247.542954] usb 1-1.3: New USB device strings: Mfr=0, Product=2, SerialNumber=0
+[ 1247.542962] usb 1-1.3: Product: Lenovo Optical Mouse
+[ 1247.550225] input: Lenovo Optical Mouse as /devices/platform/soc/3f980000.usb/usb1/1-1/1-1.3/1-1.3:1.0/0003:17EF:600E.0006/input/input5
+[ 1247.550975] hid-generic 0003:17EF:600E.0006: input,hidraw0: USB HID v1.11 Mouse [Lenovo Optical Mouse] on usb-3f980000.usb-1.3/input0
+[ 1247.829272] usb 1-1.3: USB disconnect, device number 11
+[ 1248.208753] usb 1-1.3: new low-speed USB device number 12 using dwc_otg
+[ 1248.343190] usb 1-1.3: New USB device found, idVendor=17ef, idProduct=600e
+[ 1248.343205] usb 1-1.3: New USB device strings: Mfr=0, Product=2, SerialNumber=0
+[ 1248.343213] usb 1-1.3: Product: Lenovo Optical Mouse
+[ 1248.350387] input: Lenovo Optical Mouse as /devices/platform/soc/3f980000.usb/usb1/1-1/1-1.3/1-1.3:1.0/0003:17EF:600E.0007/input/input6
+[ 1248.351087] hid-generic 0003:17EF:600E.0007: input,hidraw0: USB HID v1.11 Mouse [Lenovo Optical Mouse] on usb-3f980000.usb-1.3/input0
+[ 1249.365328] usb 1-1.3: USB disconnect, device number 12
+[ 1249.739310] usb 1-1.3: new low-speed USB device number 13 using dwc_otg
+[ 1249.873573] usb 1-1.3: New USB device found, idVendor=17ef, idProduct=600e
+[ 1249.873587] usb 1-1.3: New USB device strings: Mfr=0, Product=2, SerialNumber=0
+[ 1249.873595] usb 1-1.3: Product: Lenovo Optical Mouse
+[ 1249.880259] input: Lenovo Optical Mouse as /devices/platform/soc/3f980000.usb/usb1/1-1/1-1.3/1-1.3:1.0/0003:17EF:600E.0008/input/input7
+[ 1249.882128] hid-generic 0003:17EF:600E.0008: input,hidraw0: USB HID v1.11 Mouse [Lenovo Optical Mouse] on usb-3f980000.usb-1.3/input0
+[ 1250.390483] usb 1-1.3: USB disconnect, device number 13
+[ 1250.789664] usb 1-1.3: new low-speed USB device number 14 using dwc_otg
+[ 1250.924190] usb 1-1.3: New USB device found, idVendor=17ef, idProduct=600e
+[ 1250.924204] usb 1-1.3: New USB device strings: Mfr=0, Product=2, SerialNumber=0
+[ 1250.924212] usb 1-1.3: Product: Lenovo Optical Mouse
+[ 1250.931062] input: Lenovo Optical Mouse as /devices/platform/soc/3f980000.usb/usb1/1-1/1-1.3/1-1.3:1.0/0003:17EF:600E.0009/input/input8
+[ 1250.935787] hid-generic 0003:17EF:600E.0009: input,hidraw0: USB HID v1.11 Mouse [Lenovo Optical Mouse] on usb-3f980000.usb-1.3/input0
+[ 1269.086770] usb 1-1.3: USB disconnect, device number 14
+[ 1269.466003] usb 1-1.3: new low-speed USB device number 15 using dwc_otg
+[ 1269.600449] usb 1-1.3: New USB device found, idVendor=17ef, idProduct=600e
+[ 1269.600465] usb 1-1.3: New USB device strings: Mfr=0, Product=2, SerialNumber=0
+[ 1269.600473] usb 1-1.3: Product: Lenovo Optical Mouse
+[ 1269.612080] input: Lenovo Optical Mouse as /devices/platform/soc/3f980000.usb/usb1/1-1/1-1.3/1-1.3:1.0/0003:17EF:600E.000A/input/input9
+[ 1269.612761] hid-generic 0003:17EF:600E.000A: input,hidraw0: USB HID v1.11 Mouse [Lenovo Optical Mouse] on usb-3f980000.usb-1.3/input0
+[ 1269.976754] usb 1-1.3: USB disconnect, device number 15
+[ 1270.376279] usb 1-1.3: new low-speed USB device number 16 using dwc_otg
+[ 1270.510567] usb 1-1.3: New USB device found, idVendor=17ef, idProduct=600e
+[ 1270.510582] usb 1-1.3: New USB device strings: Mfr=0, Product=2, SerialNumber=0
+[ 1270.510591] usb 1-1.3: Product: Lenovo Optical Mouse
+[ 1270.517771] input: Lenovo Optical Mouse as /devices/platform/soc/3f980000.usb/usb1/1-1/1-1.3/1-1.3:1.0/0003:17EF:600E.000B/input/input10
+[ 1270.518942] hid-generic 0003:17EF:600E.000B: input,hidraw0: USB HID v1.11 Mouse [Lenovo Optical Mouse] on usb-3f980000.usb-1.3/input0
